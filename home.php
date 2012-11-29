@@ -15,9 +15,7 @@
 	
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 	<script src="js/script.js"></script>
-	
 </head>  
 <body> 
 
@@ -122,15 +120,15 @@
 			<div data-role="navbar" class="nav-glyphish-example" data-grid="b">
 				<ul>
 					<li><a href="home.php?username=<?=$username?>" id="homepage" data-icon="custom" method="get" >Home</a></li>
-					<li><a href="profile.php?profileUsername=<?=$username?>&username=<?=$username?>" id = "key" data-icon="custom" method="get">Profile</a></li>
+					<li><a href="profile.php?profileUsername=<?=$username?>&username=<?=$username?>" id="explore" data-icon="custom" method="get">Profile</a></li>
 					<li><a href="share.php?username=<?=$username?>" id="share" data-icon="custom" method="get" data-ajax="false">Share</a></li>	
 				</ul>
 			</div>
 		</div>
 	</div>
 </div><!-- /page popup -->
-
 </div>
+
  <?php
  } 
  ?>

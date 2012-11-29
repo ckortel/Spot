@@ -16,21 +16,19 @@
 	
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 	<script src="js/script.js"></script>
+
 </head>  
 <body> 
 
-<?php
-$username = $_GET['username'];
-?>
-<!-- /Home Screen/NewsFeed -->
-<div data-role="page" id="home">
+<!-- Create new User Page-->
+<div data-role="page" id="home" data-add-back-btn="true">
+	
+		<div data-role="header">
+			<h1>Upload new profile picture</h1>
+		</div><!-- /header -->
 
-	<div data-role="header">
-		<h1>Share A Spot</h1>
-	</div><!-- /header -->
-		
-	 <div class="container">
 		<div class="upload_form_cont">
                 <form id="upload_form" enctype="multipart/form-data" method="post" action="upload.php">
                     <div>
@@ -67,41 +65,10 @@ $username = $_GET['username'];
                 </form>
                 <img id="preview"/>
             </div>
-		</div>
+            
+            <a href = "updateProfile.php?username=<?=$_GET['username']?>" data-role="button" data-theme="b">Make the change</a>	
 
-	<form action = "temp.php" method = "post">
-		<div style="padding-left:10px;padding-right:10px;">
-		<h2>
-		Name the Spot  <input type="text" name ="newName" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset ui-focus">
-		</h2>
-		<h2>
-		What's the Spot? <input type="text" name ="newDescription" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset ui-focus">
-		</h2>
-		<input type="hidden" name="username" value="<?=$_GET['username']?>"/>
-		</div>
-		<h2>
-		Where's the Spot? 
-		</h2>
-		<div style="padding-left:10px;padding-right:10px;">
-		<p>Enter your location below or tap it on the map.</p>
-		<input type="text" name="startingpoint" id="startingpoint" />
-		</div>
-	<!-- This is where the map gets inserted -->
-		<img src = "map_fake" alt = "test"/>
-		<input type = "submit" data-direction = "reverse" data-role = "button" data-theme = "c" value = "Share">
-	</form>
-
-	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
-		<div data-role="navbar" class="nav-glyphish-example" data-grid="b">
-			<ul>
-				<li><a href="home.php?username=<?=$_GET['username']?>" id="homepage" data-icon="custom" method = "get">Home</a></li>
-				<li><a href="profile.php?profileUsername=<?=$username?>&username=<?=$username?>" id = "key" data-icon="custom" method="get">Profile</a></li>
-				<li><a href="share.php?username=<?=$username?>" id="share" data-icon="custom" method="get" data-ajax="false">Share</a></li>	
-
-			</ul>
-		</div>
-	</div>
-</div>	
+</div>
 
 </body>
 </html>
