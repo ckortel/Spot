@@ -1,0 +1,26 @@
+		.nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 38px !important; }
+		.nav-glyphish-example .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+		#key .ui-icon { background: url(glyphish-icons/30-key.png) 50% 50% no-repeat; background-size: 12px 26px; }
+		#email .ui-icon { background:  url(glyphish-icons/18-envelope.png) 50% 50% no-repeat; background-size: 24px 16px;  }
+		#login .ui-icon { background:  url(glyphish-icons/30-key.png) 50% 50% no-repeat;  background-size: 12px 26px; }
+		#coffee .ui-icon { background:  url(glyphish-icons/100-coffee.png) 50% 50% no-repeat;  background-size: 20px 24px; }
+		#skull .ui-icon { background:  url(glyphish-icons/21-skull.png) 50% 50% no-repeat;  background-size: 22px 24px; }
+		#skull .ui-icon { background:  url(glyphish-icons/21-skull.png) 50% 50% no-repeat;  background-size: 22px 24px; }
+		
+		#share .ui-icon { background:  url(icons/171-sun.png) 50% 50% no-repeat;  background-size: 22px 22px; }
+		#search .ui-icon { background:  url(icons/06-magnify.png) 50% 50% no-repeat;  background-size: 22px 22px; }
+		#favorite .ui-icon { background:  url(icons/29-heart.png) 50% 50% no-repeat;  background-size: 22px 22px; }
+		#comment .ui-icon { background:  url(icons/29-heart.png) 50% 50% no-repeat;  background-size: 22px 22px; }
+		#map .ui-icon { background:  url(icons/71-compass.png) 50% 50% no-repeat;  background-size: 22px 22px; }
+		#follow .ui-icon { background:  url(icons/102-walk.png) 50% 50% no-repeat;  background-size: 22px 22px; }
+		#explore .ui-icon { background:  url(icons/150-sailboat.png) 50% 50% no-repeat;  background-size: 22px 22px; }
+		#homepage .ui-icon { background:  url(glyphish-icons/53-house.png) 50% 50% no-repeat; background-size: 24px 22px; }
+
+		img {
+			width: 50%;	
+		}
+		
+		.LV li img {
+			float: left;
+			margin-right: 10px;
+		}
