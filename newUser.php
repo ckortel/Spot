@@ -23,8 +23,8 @@
 <body> 
 
 <!-- Create new User Page-->
-<div data-role="page" id="home" data-add-back-btn="true">
-	<div data-role="header">
+<div data-role="page" id="home" data-add-back-btn="true" class = "burlapbase">
+	<div data-role="header" class = "brownGradient">
 		<h1>Create A New User</h1>
 	</div><!-- /header -->
 	
@@ -80,7 +80,7 @@
 		<h2>
 		Confirm Password: <input type="password" name ="passwordCheck" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset ui-focus">
 		</h2>
-		<p><input type = "submit" data-direction="reverse" data-role="button" data-theme="b" value="Create Account and Sign In"></p>
+		<p><input type = "submit" data-direction="reverse" data-role="button" value="Create Account and Sign In"></p>
 	</form>
 </div>
 

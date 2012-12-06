@@ -63,7 +63,7 @@
 </head>  
 <body> 
 
-<div data-role="page" id="Home" data-add-back-btn="true">
+<div data-role="page" id="Home" data-add-back-btn="true" >
 
 	<div data-role="header" data-position="inline">
 		<h1>Spot Sneek Peek</h1>
@@ -88,7 +88,7 @@
  include("config.php"); 
  ?>
 
-<div data-role="page" data-add-back-btn="true" id="Gallery1" class="gallery-page">
+<div data-role="page" data-add-back-btn="true" id="Gallery1" class="gallery-page burlapbase">
 
 	<div data-role="header" data-position="inline">
 	<h1>Recent Spots</h1>

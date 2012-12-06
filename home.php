@@ -85,13 +85,13 @@
  ?>
 
 	<!-- /Home Screen/NewsFeed -->
-	<div data-role="page" id="home">
-		<div data-role="content">	
-				<div data-role="header">
+	<div data-role="page" class="burlapbase">
+				<div data-role="header" id="home" class='brownGradient'>
 					<h1><?=$username?>'s Home Page</h1>
 				</div><!-- /header -->
 			
 
+	<div data-role="content">	
 				<h2>News Feed</h2>	
    				<ul class = "LV" data-role="listview" data-inset="true" data-divider-theme="d" data-filter="true">
 			<!-- Let's include the header file that we created above -->
@@ -102,8 +102,8 @@
  			while($row = mysql_fetch_array($result, MYSQL_BOTH)) {
  			?>
  					<li>
- 						<a href="spot.php?url=<?=$row['url']?>&username=<?=$username?>" data-transition="slide" method="get">
- 						<img src = "<?=$row['url']?>" alt = "test"/>
+ 						<a class="iconImgA" href="spot.php?id=<?=$row['id']?>&username=<?=$username?>" data-transition="slide" method="get">
+ 						<img class="iconImg" src = "<?=$row['url']?>" alt = "test"/>
  						<h2><?=$row["name"]?></h2>
    						<p><?=$row["description"]?></p>
    						</a>
@@ -119,9 +119,9 @@
 		<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
 			<div data-role="navbar" class="nav-glyphish-example" data-grid="b">
 				<ul>
-					<li><a href="home.php?username=<?=$username?>" id="homepage" data-icon="custom" method="get" >Home</a></li>
-					<li><a href="profile.php?profileUsername=<?=$username?>&username=<?=$username?>" id="explore" data-icon="custom" method="get">Profile</a></li>
-					<li><a href="share.php?username=<?=$username?>" id="share" data-icon="custom" method="get" data-ajax="false">Share</a></li>	
+					<li><a href="home.php?username=<?=$username?>" id="homepage" data-icon="custom" method="get" class='brownGradient'>Home</a></li>
+					<li><a href="profile.php?profileUsername=<?=$username?>&username=<?=$username?>" id="explore" data-icon="custom" method="get" class='brownGradient'>Profile</a></li>
+					<li><a href="share.php?username=<?=$username?>" id="share" data-icon="custom" method="get" class='brownGradient'>Share</a></li>	
 				</ul>
 			</div>
 		</div>

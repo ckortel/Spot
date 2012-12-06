@@ -16,7 +16,7 @@
 	
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
-		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
 
 </head> 
@@ -25,31 +25,37 @@
 <!-- CHECK 123 -->
 
 <!-- Start of first page: #one -->
-<div data-role="page" id="one">
+<div data-role="page" id="one" class="burlapbase">
 
-	<div data-role="header">
-		<h1>Welcome to Spot</h1>
+	<div data-role="header" class='brownGradient'>
+		<h1>Welcome to Spotted.</h1>
 	</div><!-- /header -->
 
-	<div data-role="content">	
+	<div data-role="content">
+	
+		<div class = "login">	
 		<h2>Log In <span id="username"></span></h2>
 		
 		<p> Choose to sign up, log in, or visit as a guest below!</p>	
+		</div>
 		
-		<p><a href="#two" data-role="button">Log In</a></p>	
-		<p><a href="newUser.php" data-role="button" data-ajax="false">Create a User</a></p>
-		<p><a href="visitor.php" data-role="button" data-ajax="false">Enter as a Visitor</a></p>
+		<p><a  class = "brownGradient" href="#two" data-role="button">Log In</a></p>	
+		<p><a  class = "brownGradient" href="newUser.php" data-role="button" data-ajax="false">Create a User</a></p>
+		<p><a  class = "brownGradient" href="visitor.php" data-role="button" data-ajax="false">Enter as a Visitor</a></p>
 	</div><!-- /content -->
 </div>
 
 <!-- Start of Log In Page: #two -->
-<div data-role="page" id="two" data-add-back-btn="true">
-	<div data-role="header">
+<div data-role="page" id="two" class="burlapbase">
+	<div data-role="header" class='brownGradient'>
 		<h1>Log In</h1>
 	</div><!-- /header -->
 
 	<div data-role="content">	
+	
+		<div class = "login">
 		<h2>Please enter your username and password</h2>
+		</div>
 		
 		<form action = "home.php" method = "post">
 			<h2>
@@ -58,7 +64,7 @@
 			<h2>
 			Password: <input type="password" name ="password" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset ui-focus">
 			</h2>
-			<p><input type = "submit" data-direction="reverse" data-role="button" data-theme="b" value = "Sign In"></p>	
+			<input type = "submit"  class = "brownGradient" data-direction="reverse" data-role="button" value = "Sign In">
 		</form>
 	</div><!-- /content -->
 </div><!-- /Start of Log In Page: page two -->

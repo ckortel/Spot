@@ -16,7 +16,6 @@
 	
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
-	<script src="js/script.js"></script>
 </head>  
 <body> 
 
@@ -24,9 +23,10 @@
 $username = $_GET['username'];
 ?>
 <!-- /Home Screen/NewsFeed -->
-<div data-role="page" id="home">
-
-	<div data-role="header">
+<div data-role="page" id="home" class = "uploadSpot burlapbase">
+	<script src="js/script.js"></script>
+	
+	<div data-role="header" class = "brownGradient">
 		<h1>Share A Spot</h1>
 	</div><!-- /header -->
 		
@@ -94,9 +94,9 @@ $username = $_GET['username'];
 	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
 		<div data-role="navbar" class="nav-glyphish-example" data-grid="b">
 			<ul>
-				<li><a href="home.php?username=<?=$_GET['username']?>" id="homepage" data-icon="custom" method = "get">Home</a></li>
-				<li><a href="profile.php?profileUsername=<?=$username?>&username=<?=$username?>" id = "key" data-icon="custom" method="get">Profile</a></li>
-				<li><a href="share.php?username=<?=$username?>" id="share" data-icon="custom" method="get" data-ajax="false">Share</a></li>	
+				<li><a class='brownGradient' href="home.php?username=<?=$_GET['username']?>" id="homepage" data-icon="custom" method = "get">Home</a></li>
+				<li><a class='brownGradient' href="profile.php?profileUsername=<?=$username?>&username=<?=$username?>" id = "explore" data-icon="custom" method="get">Profile</a></li>
+				<li><a class='brownGradient' href="share.php?username=<?=$username?>" id="share" data-icon="custom" method="get">Share</a></li>	
 
 			</ul>
 		</div>

@@ -1,3 +1,6 @@
+$(".uploadSpot").unbind('pageshow');
+$(".uploadSpot").bind('pageshow', function(event) {
+	
 // common variables
 var iBytesUploaded = 0;
 var iBytesTotal = 0;
@@ -173,3 +176,5 @@ function uploadAbort(e) { // upload abort
     document.getElementById('abort').style.display = 'block';
     clearInterval(oTimer);
 }
+
+});

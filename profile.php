@@ -32,19 +32,24 @@
  ?> 
 
 <!-- /Home Screen/NewsFeed -->
-<div data-role="page" id="home">
+<div data-role="page" id="home" class="burlapbase">
 
-	<div data-role="header">
-		<h1><?=$profileUsername?></h1>
+	<div data-role="header" class='brownGradient'>
+		<h1><?=$profileUsername?>'s Profile</h1>
 	</div><!-- /header -->
-		<img src = "<?=$userPhoto?>" alt = "test" vspace="20" hspace="20" align="middle"/>
+	
+	<h1></h1>
+	
+	<div class = "profilePicture">
+		<img src = "<?=$userPhoto?>" alt = "test"/>
 		<?php
 		if ($profileUsername == $_GET['username']) {
 			?>
-			<a href="changePicture.php?username=<?=$profileUsername?>" data-theme="b" data-role="button" data-ajax="false">Click here to change your profile picture</a>	
+			<a  class = "brownGradient" href="changePicture.php?username=<?=$profileUsername?>" data-role="button" data-ajax="false">Change Picture</a>	
 			<?php	
 		}
 		?>
+	</div>	
 		
 	<div data-role="content">	
 			
@@ -53,11 +58,11 @@
 			<?php
 			if ($_GET['username'] != $profileUsername) {
 			?>
-   				<ul class = "LV" data-role="listview" data-inset="true" data-divider-theme="d" data-filter="true">
+   				<ul data-role="listview" data-inset="true" data-divider-theme="d" data-filter="true">
 			<?php
 			} else {
 			?>
-				<ul class = "LV" data-role="listview" data-inset="true"  data-split-icon="delete" data-divider-theme="d" data-filter="true">
+				<ul data-role="listview" data-inset="true" data-split-icon="delete" data-divider-theme="d" data-filter="true">
 			<?php	
 			}
 			$query = "select * from Spots where username = '$profileUsername'";
@@ -67,9 +72,10 @@
 	 				if ($_GET['username'] != $profileUsername) {
 	 			?>
 	 					<li>
-	 						<a href="spot.php?url=<?=$row['url']?>&username=<?=$username?>" data-transition="slide" method="get">
-	 						<img src = "<?=$row['url']?>" alt = "test"/>
-	   						<h3><?=$row["description"]?></h3>
+	 						<a class="iconImgA" href="spot.php?id=<?=$row['id']?>&username=<?=$username?>" data-transition="slide" method="get">
+	 						<img class="iconImg" src = "<?=$row['url']?>" alt = "test"/>
+	   						<h4><?=$row["name"]?></h4>
+		   					<p><?=$row["description"]?></p>
 	   						</a>
 	   					</li>
 	   					<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
@@ -77,9 +83,10 @@
 	 				} else {
 	 				?>
 	 					<li>
-							<a href="spot.php?url=<?=$row['url']?>&username=<?=$username?>" data-transition="slide" method="get">
-							<img src = "<?=$row['url']?>" alt = "test"/>
-	   						<h3><?=$row["description"]?></h3>
+							<a class="iconImgA" href="spot.php?id=<?=$row['id']?>&username=<?=$username?>" data-transition="slide" method="get">
+							<img class="iconImg" src = "<?=$row['url']?>" alt = "test"/>
+	   						<h4><?=$row["name"]?></h4>
+		   					<p><?=$row["description"]?></p>
 							</a><a href="#delete" class = "spot" id = "<?=$row['id']?>" data-rel="popup" data-position-to="window" data-transition="pop">Delete Spot</a>
 						</li>
 	 				<?php	
@@ -103,23 +110,24 @@
 			<h2><?=$profileUsername?>'s Favorite Spots</h2>
 		
    				
-   			<ul class = "LV" data-role="listview" data-inset="true" data-divider-theme="d" data-filter="true">
+   			<ul data-role="listview" data-inset="true" data-divider-theme="d" data-filter="true">
 			
 		<?php
 			$query = "select * from Favorites where username = '$profileUsername'";
  			$result = mysql_query($query);
 			if (mysql_num_rows($result) != 0) {
  				while($row = mysql_fetch_array($result, MYSQL_BOTH)) {
- 					$picture = $row['url'];
- 					$query2 = "select * from Spots where url = '$picture'";
+ 					$spotID = $row['spotID'];
+ 					$query2 = "select * from Spots where id = '$spotID'";
  					$result2 = mysql_query($query2);
  					while($row2 = mysql_fetch_array($result2, MYSQL_BOTH)) {
  						if ($_GET['username'] != $profileUsername) {
 	 			?>
 		 					<li>
-		 						<a href="spot.php?url=<?=$row2['url']?>&username=<?=$username?>" data-transition="slide" method="get" >
-		 						<img src = "<?=$row2['url']?>" alt = "test"/>
-		   						<h3><?=$row2["description"]?></h3>
+		 						<a  class="iconImgA" href="spot.php?id=<?=$row2['id']?>&username=<?=$username?>" data-transition="slide" method="get" >
+		 						<img class="iconImg" src = "<?=$row2['url']?>" alt = "test"/>
+		 						<h4><?=$row2["name"]?></h4>
+		 						<p><?=$row2["description"]?></p>
 		   						</a>
 		   					</li>
 		   					<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
@@ -127,11 +135,13 @@
  						} else {
  						?>
 	 						<li>
-								<a href="spot.php?url=<?=$row['url']?>&username=<?=$username?>" data-transition="slide" method="get">
-								<img src = "<?=$row['url']?>" alt = "test"/>
-		   						<h3><?=$row2["description"]?></h3>
+								<a class="iconImgA" href="spot.php?id=<?=$row['id']?>&username=<?=$username?>" data-transition="slide" method="get">
+								<img class="iconImg" src = "<?=$row['url']?>" alt = "test"/>
+		   						<h4><?=$row2["name"]?></h4>
+		   						<p><?=$row2["description"]?></p>
 								</a>
 							</li>
+							
  						<?php	
  						}	
  					}
@@ -150,9 +160,9 @@
 	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
 		<div data-role="navbar" class="nav-glyphish-example" data-grid="b">
 		<ul>
-			<li><a href="home.php?username=<?=$username?>" id="homepage" data-icon="custom" method="get">Home</a></li>
-			<li><a href="profile.php?profileUsername=<?=$username?>&username=<?=$username?>" id = "key" data-icon="custom" method="get">Profile</a></li>
-			<li><a href="share.php?username=<?=$username?>" id="share" data-icon="custom" method="get" data-ajax="false">Share</a></li>
+			<li><a href="home.php?username=<?=$username?>" id="homepage" data-icon="custom" method="get" class='brownGradient'>Home</a></li>
+			<li><a href="profile.php?profileUsername=<?=$username?>&username=<?=$username?>" id = "explore" data-icon="custom" method="get" class='brownGradient'>Profile</a></li>
+			<li><a href="share.php?username=<?=$username?>" id="share" data-icon="custom" method="get" class='brownGradient'>Share</a></li>
 		</ul>
 		</div>
 	</div>
