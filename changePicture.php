@@ -32,7 +32,7 @@
 		<div class="upload_form_cont">
                 <form id="upload_form" enctype="multipart/form-data" method="post" action="upload.php">
                     <div>
-                        <div><label for="image_file">Please select image file</label></div>
+                        <div class = "brownFont"><label for="image_file">Please select image file</label></div>
                         <div><input type="file" name="image_file" id="image_file" onchange="fileSelected();"/></div>
                         
                     </div>

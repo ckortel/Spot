@@ -1,11 +1,8 @@
-$(".uploadSpot").unbind('pageshow');
-$(".uploadSpot").bind('pageshow', function(event) {
-	
 // common variables
 var iBytesUploaded = 0;
 var iBytesTotal = 0;
 var iPreviousBytesLoaded = 0;
-var iMaxFilesize = 21048576; // 1MB
+var iMaxFilesize = 1048576; // 1MB
 var oTimer = 0;
 var sResultFileSize = '';
 
@@ -176,5 +173,3 @@ function uploadAbort(e) { // upload abort
     document.getElementById('abort').style.display = 'block';
     clearInterval(oTimer);
 }
-
-});
