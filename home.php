@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Where the Wild Things Are | Home</title> 
+	<title>Spotted.</title> 
 	<meta charset="utf-8">
 	<meta name="apple-mobile-web-app-capable" content="yes">
  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -121,7 +121,7 @@
 				<ul>
 					<li><a href="home.php?username=<?=$username?>" id="homepage" data-icon="custom" method="get" class='brownGradient'>Home</a></li>
 					<li><a href="profile.php?profileUsername=<?=$username?>&username=<?=$username?>" id="explore" data-icon="custom" method="get" class='brownGradient'>Profile</a></li>
-					<li><a href="share.php?username=<?=$username?>" id="share" data-icon="custom" method="get" class='brownGradient'>Share</a></li>	
+					<li><a href="share.php?username=<?=$username?>" id="share" data-icon="custom" method="get" class='brownGradient' data-ajax="false">Share</a></li>	
 				</ul>
 			</div>
 		</div>

@@ -114,8 +114,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#553e38', end
 			text-shadow: none;
 		}
 		
+		.brownFont label {
+			color: #553e38;	
+			font-family: 'Montserrat', sans-serif;
+			text-shadow: none;
+			font-size: 20px;
+			font-weight:bold;
+		}
+		
 		.ui-btn-up-c a.ui-link-inherit.brownFont {
 			color: #553e38;	
 			font-family: 'Montserrat', sans-serif;
+		}
+		
+		.ui-title {
+			width: 100%;
+			margin: 0.6em 0% 0.8em !important;	
 		}
 		

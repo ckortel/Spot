@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Where the Wild Things Are | Login</title> 
+	<title>Spotted.</title> 
 	<meta charset="utf-8">
 	<meta name="apple-mobile-web-app-capable" content="yes">
  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -58,11 +58,11 @@
 			<?php
 			if ($_GET['username'] != $profileUsername) {
 			?>
-   				<ul data-role="listview" data-inset="true" data-divider-theme="d" data-filter="true">
+   				<ul data-role="listview" data-inset="true" data-divider-theme="d" data-split-filter="true">
 			<?php
 			} else {
 			?>
-				<ul data-role="listview" data-inset="true" data-split-icon="delete" data-divider-theme="d" data-filter="true">
+				<ul data-role="listview" data-inset="true" data-split-icon="delete" data-split-theme="d" data-filter="true">
 			<?php	
 			}
 			$query = "select * from Spots where username = '$profileUsername'";
@@ -100,10 +100,10 @@
 			?>
 			</ul>
 			
-			<div data-role="popup" id="delete" data-theme="d" data-overlay-theme="b" class="ui-content" style="max-width:340px;">
+			<div data-role="popup" id="delete" class="ui-content" style="max-width:340px;">
 				<h3>Delete this Spot?</h3>
 				<p>This will permanently delete it from your Spots.</p>
-				<a href="#" id = "spot_delete" method="get"" data-role="button" data-rel="back" data-theme="b" data-icon="check" data-inline="true" data-mini="true">Delete</a>
+				<a href="#" id = "spot_delete" method="get"" data-role="button" data-rel="back" data-icon="check" data-inline="true" data-mini="true">Delete</a>
 				<a href="#" data-role="button" data-rel="back" data-inline="true" data-mini="true">Cancel</a>	
 			</div>
 			
@@ -162,7 +162,7 @@
 		<ul>
 			<li><a href="home.php?username=<?=$username?>" id="homepage" data-icon="custom" method="get" class='brownGradient'>Home</a></li>
 			<li><a href="profile.php?profileUsername=<?=$username?>&username=<?=$username?>" id = "explore" data-icon="custom" method="get" class='brownGradient'>Profile</a></li>
-			<li><a href="share.php?username=<?=$username?>" id="share" data-icon="custom" method="get" class='brownGradient'>Share</a></li>
+			<li><a href="share.php?username=<?=$username?>" id="share" data-icon="custom" method="get" class='brownGradient' data-ajax="false">Share</a></li>
 		</ul>
 		</div>
 	</div>

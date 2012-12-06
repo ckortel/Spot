@@ -23,9 +23,9 @@
 <body> 
 
 <!-- Create new User Page-->
-<div data-role="page" id="home" data-add-back-btn="true">
+<div data-role="page" id="home" class="burlapbase">
 	
-		<div data-role="header">
+		<div data-role="header" class='brownGradient'>
 			<h1>Upload new profile picture</h1>
 		</div><!-- /header -->
 
@@ -66,7 +66,7 @@
                 <img id="preview"/>
             </div>
             
-            <a href = "updateProfile.php?username=<?=$_GET['username']?>" data-role="button" data-theme="b">Make the change</a>	
+            <a class='brownGradient' href = "updateProfile.php?username=<?=$_GET['username']?>" data-role="button" data-theme="b">Make the change</a>	
 
 </div>
 

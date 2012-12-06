@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Where the Wild Things Are</title> 
+	<title>Spotted.</title> 
 	<meta charset="utf-8">
 	<meta name="apple-mobile-web-app-capable" content="yes">
  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -36,12 +36,11 @@
 		<div class = "login">	
 		<h2>Log In <span id="username"></span></h2>
 		
-		<p> Choose to sign up, log in, or visit as a guest below!</p>	
+		<p> Sign up or log in below! </p>	
 		</div>
 		
 		<p><a  class = "brownGradient" href="#two" data-role="button">Log In</a></p>	
 		<p><a  class = "brownGradient" href="newUser.php" data-role="button" data-ajax="false">Create a User</a></p>
-		<p><a  class = "brownGradient" href="visitor.php" data-role="button" data-ajax="false">Enter as a Visitor</a></p>
 	</div><!-- /content -->
 </div>
 
